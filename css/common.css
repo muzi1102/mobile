@@ -54,18 +54,14 @@ html {
     z-index: 999;
     left: 0rem;
     bottom: 0rem;
-    display: flex;
+    /* display: flex; */
     background-color: #fff;
 }
 
 .footer a {
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+    width: 33.33%;
+    float: left;
     text-align: center;
-    box-sizing: border-box;
     display: block;
     color: #989898;
     padding-bottom: 0.08rem;
@@ -78,9 +74,23 @@ html {
     margin-top: 0.03rem;
 }
 
+.message-dot:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0.08rem;
+    height: 0.08rem;
+    background-color: #f74c31;
+    border-radius: 0.05rem;
+    right: .48rem;
+    top: -.02rem;
+
+}
+
 .nav {
     font-size: .16rem;
     display: block;
+    position: relative;
 }
 
 .ques {
@@ -152,7 +162,8 @@ html {
     bottom: .48rem;
     overflow-y: auto;
 }
-.ui-inner-content{
+
+.ui-inner-content {
     bottom: 0;
 }
 
@@ -214,7 +225,7 @@ html {
     left: 30%;
 }
 
-.ui-searchbar-text{
+.ui-searchbar-text {
     font-size: .14rem;
     color: #989898;
     text-align: center;
@@ -223,9 +234,11 @@ html {
 .ui-problemlist {
     background-color: #ededed;
 }
-.ui-marginbottom{
+
+.ui-marginbottom {
     border-bottom: 1px solid #ededed;
 }
+
 .ui-problem {
     margin-bottom: 0.08rem;
     background-color: #fff;
@@ -294,30 +307,37 @@ html {
 .ui-proname-title {
     color: #399026
 }
-.ui-blank{
+
+.ui-blank {
     height: .18rem;
     width: 100%;
     background-color: #fff;
 }
 
+
 /* index end */
 
+
 /* 搜索开始 */
-.ui-searchbar-input{
+
+.ui-searchbar-input {
     padding-left: .44rem;
     position: relative;
     padding-right: .34rem;
     display: none
 }
-.ui-searchbar-input .icon-search{
+
+.ui-searchbar-input .icon-search {
     left: .2rem
 }
-.ui-searchbar-input input{
+
+.ui-searchbar-input input {
     width: 100%;
     height: 100%;
     border: 0;
 }
-.icon-close{
+
+.icon-close {
     background-position: -.18rem -2.8rem;
     width: .18rem;
     height: .2rem;
@@ -327,29 +347,36 @@ html {
     display: none;
     margin: .1rem 0;
 }
-.ui-empty{
+
+.ui-empty {
     text-align: center;
     display: block;
     font-size: .14rem;
     color: #989898;
 }
-.ui-push{
+
+.ui-push {
     margin-top: 1.26rem;
     margin-bottom: 1rem;
-
 }
-h2.ui-space{
+
+h2.ui-space {
     margin-bottom: .18rem;
 }
-.icon-aset{
+
+.icon-aset {
     /* background-position: -1.55rem -1.85rem; */
-   background-position: -1.1rem -1.85rem;
+    background-position: -1.1rem -1.85rem;
     width: .14rem;
     height: 0.08rem;
     margin-top: .28rem;
     display: none;
 }
+
+
 /* 搜索结束 */
+
+
 /* 问题解答 start */
 
 .ui-solve-title {
@@ -657,6 +684,7 @@ a.active {
     line-height: .46rem;
     width: 25%;
     min-width: .45rem;
+    position: relative;
 }
 
 .timeline {
@@ -679,7 +707,17 @@ a.active {
     border-radius: 2px;
     left: .84rem;
 }
-
+.status-dot:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0.08rem;
+    height: 0.08rem;
+    background-color: #f74c31;
+    border-radius: 0.05rem;
+    right: .2rem;
+    top: .14rem;
+}
 .ui-re-time {
     width: .84rem;
     text-align: center;
@@ -797,13 +835,15 @@ i.icon-liked {
     width: .34rem;
     height: .24rem;
 }
-.icon-load{
+
+.icon-load {
     background-position: -.47rem -3.45rem;
     width: .326rem;
     height: .34rem;
     margin-top: .19rem;
     margin-bottom: 0.09rem;
 }
+
 
 /* 我的请求结束 */
 
@@ -881,25 +921,30 @@ i.icon-liked {
 .ui-question-tag a {
     color: #4d4d4d;
 }
-.ui-qsecond{
+
+.ui-qsecond {
     font-size: .14rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.ui-hgreen{
+
+.ui-hgreen {
     color: #399026;
 }
+
 .ui-label {
     width: .6rem;
     line-height: .44rem;
     position: absolute;
 }
-a.ui-qbtnsave{
+
+a.ui-qbtnsave {
     background-color: #5bb647;
     color: #fff;
     border: none;
 }
+
 .ui-panel {
     background-color: #fff;
     margin: 0.08rem 0;
@@ -918,7 +963,7 @@ a.ui-qbtnsave{
     height: 1rem;
 }
 
-.ui-qtextarea textarea{
+.ui-qtextarea textarea {
     width: 100%;
     height: 1rem;
     outline: none;
@@ -938,7 +983,8 @@ a.ui-qbtnsave{
     padding-left: .6rem;
     border: 0;
 }
-.ui-qword{
+
+.ui-qword {
     margin-left: .24rem;
     border-bottom: 1px solid #ededed;
     padding: .1rem 0;
@@ -947,39 +993,47 @@ a.ui-qbtnsave{
     color: #989898;
     letter-spacing: 0.02rem
 }
-.ui-qwordblock{
+
+.ui-qwordblock {
     margin-right: .18rem;
 }
-.ui-qplugin{
+
+.ui-qplugin {
     padding: .12rem 0;
     margin-left: .24rem;
 }
-.icon-add{
+
+.icon-add {
     background-position: -.21rem -1.2rem;
     width: .56rem;
     height: .56rem;
 }
-.ui-qcontact-title{
+
+.ui-qcontact-title {
     font-size: .14rem;
     color: #989898;
     margin-left: .24rem;
     padding-top: .18rem;
 }
-.icon-require{
+
+.icon-require {
     background-position: .23rem -3.26rem;
     width: .14rem;
     height: .14rem;
 }
-.ui-qbtninner{
+
+.ui-qbtninner {
     /* padding-left: .22rem; */
     margin: 0 .2rem;
     padding-bottom: .7rem;
 }
-.ui-qbtn{
+
+.ui-qbtn {
     background-color: #fff;
     padding-top: .26rem;
 }
-.ui-qbtnitem{
+
+.ui-qbtnitem {
     width: 1.5rem;
     height: .42rem;
     line-height: .42rem;
@@ -990,21 +1044,26 @@ a.ui-qbtnsave{
     background-color: #ddd;
     color: #4d4d4d;
 }
-.ui-qbtn a:first-child{
+
+.ui-qbtn a:first-child {
     margin-right: .3rem;
 }
-.ui-qbtndisable{
+
+.ui-qbtndisable {
     background-color: #fff;
     color: #bababa;
 }
-.ui-linklabel{
+
+.ui-linklabel {
     text-align: center;
 }
-.icon-require{
+
+.icon-require {
     color: red;
     margin-right: 0.06rem;
 }
-.ui-qstab{
+
+.ui-qstab {
     width: .9rem;
     position: absolute;
     left: 0;
@@ -1014,38 +1073,47 @@ a.ui-qbtnsave{
     color: #6b6b6b;
     border-right: 1px solid #ededed;
 }
-.ui-qstab-item.active{
+
+.ui-qstab-item.active {
     color: #399026
 }
-.ui-qscontent li.ui-qscategory{
+
+.ui-qscontent li.ui-qscategory {
     font-size: .14rem;
 }
-.ui-qscontent li.ui-qscategory a{
+
+.ui-qscontent li.ui-qscategory a {
     color: #989898;
 }
-.ui-qscontent-list{
+
+.ui-qscontent-list {
     margin-left: .9rem;
 }
-.ui-qscontent li{
+
+.ui-qscontent li {
     height: .44rem;
     line-height: .44rem;
     padding-left: .16rem;
     border-bottom: 1px solid #ededed;
 }
-.ui-qscontent li a{
+
+.ui-qscontent li a {
     color: #4d4d4d;
 }
-.ui-qstab-item{
+
+.ui-qstab-item {
     height: .75rem;
     border-bottom: 1px solid #ededed;
     background-color: #f9fcf8;
     line-height: .75rem;
     text-align: center;
 }
-.ui-qscontent{
+
+.ui-qscontent {
     font-size: .16rem;
 }
-.ui-remind-dialog{
+
+.ui-remind-dialog {
     width: 2.66rem;
     height: 1.9rem;
     font-size: .16rem;
@@ -1059,14 +1127,16 @@ a.ui-qbtnsave{
     text-align: center;
     border-radius: 0.04rem;
 }
-.ui-dialog-tip{
+
+.ui-dialog-tip {
     color: #ee780c;
     width: 2.15rem;
     margin: .35rem auto;
     text-align: center;
     line-height: .24rem;
 }
-.ui-dialog-btn{
+
+.ui-dialog-btn {
     width: .9rem;
     height: .38rem;
     background-color: #ededed;
@@ -1075,19 +1145,26 @@ a.ui-qbtnsave{
     line-height: .38rem;
     display: inline-block;
 }
-.ui-dialog-btn:first-child{
+
+.ui-dialog-btn:first-child {
     margin-right: .29rem;
 }
+
+
 /* 我要提问结束 */
+
+
 /* 我的草稿开始 */
-.draf-content{
+
+.draf-content {
     background-color: #f8f8f8;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
 }
-.draf-item{
+
+.draf-item {
     height: .44rem;
     line-height: .44rem;
     background-color: #fff;
@@ -1097,8 +1174,9 @@ a.ui-qbtnsave{
     position: relative;
     padding-right: .36rem;
 }
-.icon-editor{
-   background-position: -1.55rem -2.15rem;
+
+.icon-editor {
+    background-position: -1.55rem -2.15rem;
     width: .16rem;
     height: .18rem;
     position: absolute;
@@ -1106,16 +1184,20 @@ a.ui-qbtnsave{
     top: .12rem;
     overflow: hidden;
 }
-.draf-item:first-child{
+
+.draf-item:first-child {
     margin-top: 0.08rem;
 }
-.draf-item a{
+
+.draf-item a {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
     color: #4d4d4d;
 }
+
+
 /* 我的草稿结束 */
 
 .fl {
