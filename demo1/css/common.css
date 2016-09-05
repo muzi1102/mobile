@@ -30,7 +30,7 @@ html {
     position: absolute;
     left: .12rem;
     top: -.2.5rem;
-    top: -.25rem;
+    top: -.28rem;
 }
 
 .header-title {
@@ -396,7 +396,7 @@ h2.ui-space {
 }
 
 .m-answer {
-    padding: .24rem .1rem 0 0;
+    padding: .24rem .22rem 0 0;
 }
 .m-ansewerinner{
     margin-left: .22rem;
@@ -410,6 +410,7 @@ h2.ui-space {
     padding: .15rem 0;
     border-bottom: 1px solid #ededed;
     font-size: .15rem;
+    margin-right: .22rem;
 }
 
 .ui-describe-answer {
@@ -421,6 +422,7 @@ h2.ui-space {
 .ui-describe-tag {
     margin-bottom: .1rem;
     font-weight: normal;
+    font-size: .15rem;
 }
 
 .ui-btnlist {
@@ -441,10 +443,14 @@ h2.ui-space {
 }
 
 .ui-btn-lightblue {
-    border: 1px solid #5bb647;
-    color: #5bb647;
+   border: 1px solid #5bb647;
+   color: #5bb647;
+   font-weight: bold;
 }
-
+.ui-btn-blue{
+    background-color: #5bb647;
+    color: #fff;
+}
 .ui-btn-gray {
     background-color: #ededed;
     color: #4d4d4d;
@@ -853,6 +859,7 @@ i.icon-liked {
     margin-left: .21rem;
     padding-bottom: .28rem;
     border-bottom: 1px solid #ededed;
+    margin-right: .22rem;
 }
 
 .ui-gray {
