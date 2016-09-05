@@ -393,18 +393,17 @@ h2.ui-space {
 
 .ui-describe {
     font-size: .16rem;
-    /* margin-left: .3rem; */
     margin-bottom: .44rem;
 }
 
 .m-answer {
-    padding: .24rem .1rem .24rem 0;
-    /* margin-left: .3rem; */
-    border-bottom: 1px solid #ededed;
+    padding: .24rem .1rem 0 0;
 }
 .m-ansewerinner{
     margin-left: .3rem;
     padding-top: .1rem;
+    padding-bottom: .24rem;
+    border-bottom: 1px solid #ededed;
 }
 .m-question {
     margin-left: .21rem;
@@ -435,10 +434,9 @@ h2.ui-space {
 }
 
 .ui-btn {
-    width: 1.5rem;
+    width: 1.45rem;
     height: .42rem;
     line-height: .42rem;
-    /* display: inline-block; */
     float: left;
     text-align: center;
 }
@@ -1015,7 +1013,6 @@ a.ui-qbtnsave {
 }
 
 .ui-qbtninner {
-    /* padding-left: .22rem; */
     margin: 0 .2rem;
     padding-bottom: .7rem;
 }
@@ -1029,8 +1026,7 @@ a.ui-qbtnsave {
     width: 1.5rem;
     height: .42rem;
     line-height: .42rem;
-    /* float: left; */
-    display: inline-block;
+    float: left;
     text-align: center;
     border: 1px solid #ddd;
     background-color: #ddd;
@@ -1165,7 +1161,7 @@ a.ui-qbtnsave {
 }
 
 .icon-editor {
-    background-position: -1.55rem -2.15rem;
+    background-position: -1.55rem -2.16rem;
     width: .16rem;
     height: .18rem;
     position: absolute;
