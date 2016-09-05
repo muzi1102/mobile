@@ -37,7 +37,8 @@ html {
     letter-spacing: 0.005rem;
     font-size: .15rem;
     text-align: center;
-    color: #404040
+    color: #404040;
+    font-weight: bold;
 }
 
 
@@ -396,7 +397,7 @@ h2.ui-space {
 }
 
 .m-answer {
-    padding: .24rem .22rem 0 0;
+    padding: .12rem .22rem 0 0;
 }
 .m-ansewerinner{
     margin-left: .22rem;
@@ -442,7 +443,7 @@ h2.ui-space {
 }
 
 .ui-btn-lightblue {
-   border: 1px solid #5bb647;
+   border: 2px solid #5bb647;
    color: #5bb647;
    font-weight: bold;
 }
