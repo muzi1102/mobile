@@ -18,11 +18,11 @@ html {
 
 .header {
     width: 100%;
-    height: .64rem;
+    height: .44rem;
     background-color: #fff;
     border-bottom: 1px solid #c4c4c4;
     padding-left: .13rem;
-    line-height: .64rem;
+    line-height: .44rem;
     position: relative;
 }
 
@@ -51,7 +51,6 @@ html {
     z-index: 999;
     left: 0rem;
     bottom: 0rem;
-    /* display: flex; */
     background-color: #fff;
 }
 
@@ -155,7 +154,7 @@ html {
     position: absolute;
     left: 0;
     right: 0;
-    top: .64rem;
+    top: .44rem;
     bottom: .48rem;
     overflow-y: auto;
 }
@@ -400,7 +399,7 @@ h2.ui-space {
     padding: .24rem .1rem 0 0;
 }
 .m-ansewerinner{
-    margin-left: .3rem;
+    margin-left: .22rem;
     padding-top: .1rem;
     padding-bottom: .24rem;
     border-bottom: 1px solid #ededed;
@@ -507,6 +506,7 @@ h2.ui-space {
     white-space: nowrap;
     text-overflow: ellipsis;
     position: relative;
+    padding-right: .54rem;
 }
 /* 问题解答 end */
 
