@@ -1,0 +1,1198 @@
+/* header */
+
+html {
+    font-size: 625%;
+}
+
+.iconfont {
+    background: url('../img/UI01.png') no-repeat;
+    display: inline-block;
+    background-size: 2.03rem 4.23rem;
+}
+
+.icon-left {
+    width: 0.09rem;
+    height: 0.16rem;
+    background-position: -1.1rem -1.4rem
+}
+
+.header {
+    width: 100%;
+    height: .64rem;
+    background-color: #fff;
+    border-bottom: 1px solid #c4c4c4;
+    padding-left: .13rem;
+    line-height: .64rem;
+    position: relative;
+}
+
+.back {
+    position: absolute;
+    left: .12rem;
+    top: -.2.5rem;
+    top: -.25rem;
+}
+
+.header-title {
+    letter-spacing: 0.005rem;
+    font-size: .15rem;
+    text-align: center;
+    color: #404040
+}
+
+
+/* footer */
+
+.footer {
+    width: 100%;
+    height: .48rem;
+    border-top: 1px solid #ebebeb;
+    position: fixed;
+    z-index: 999;
+    left: 0rem;
+    bottom: 0rem;
+    /* display: flex; */
+    background-color: #fff;
+}
+
+.footer a {
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    display: block;
+    color: #989898;
+    padding-bottom: 0.08rem;
+    padding-top: 0.06rem;
+    position: relative;
+}
+
+.footer-col {
+    font-size: .12rem;
+    margin-top: 0.03rem;
+}
+
+.message-dot:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0.08rem;
+    height: 0.08rem;
+    background-color: #f74c31;
+    border-radius: 0.05rem;
+    right: .48rem;
+    top: -.02rem;
+
+}
+
+.nav {
+    font-size: .16rem;
+    display: block;
+    position: relative;
+}
+
+.ques {
+    height: .18rem;
+}
+
+.loc-sp {
+    width: .4rem;
+    height: .38rem;
+    top: -.2rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -.2rem;
+}
+
+.icon-req {
+    width: 0.19rem;
+    height: 0.16rem;
+    background-position: -.2rem -.6rem
+}
+
+.icon-ques {
+    width: .4rem;
+    height: .38rem;
+    background-position: -.75rem -.5rem
+}
+
+.icon-draft {
+    width: .2rem;
+    height: .16rem;
+    background-position: -1.54rem -.61rem;
+}
+
+
+/* footer end*/
+
+
+/* loding start */
+
+.loding-box {
+    width: .5rem;
+    height: .5rem;
+    border-radius: .1rem;
+    box-shadow: 0.02rem 0.02rem 0.06rem #959595;
+    padding: 0.08rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -.25rem;
+    margin-right: -.25rem;
+}
+
+.icon-loding {
+    width: .326rem;
+    height: .36rem;
+    background-position: -.47rem -3.45rem;
+    display: block;
+}
+
+.loding,
+.connnet,
+.ui-content {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: .64rem;
+    bottom: .48rem;
+    overflow-y: auto;
+}
+
+.ui-inner-content {
+    bottom: 0;
+}
+
+
+/* loding end */
+
+
+/* wifi  start*/
+
+.icon-wifi {
+    background-position: -.6rem -2.74rem;
+    width: .416rem;
+    height: .294rem;
+}
+
+.connnet-box {
+    width: 1.4rem;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.u-tip {
+    font-size: .14rem;
+    color: #989898;
+    line-height: .2rem;
+}
+
+
+/* wifi end*/
+
+
+/* index start */
+
+.index-content {
+    /* background-color: #ededed; */
+}
+
+.ui-searchbar {
+    padding: 0.06rem;
+    background-color: #f8f8f8;
+    font-size: .16rem;
+}
+
+.ui-searchbar-inner {
+    height: .4rem;
+    line-height: .4rem;
+    border: 1px solid #ededed;
+    background-color: #fff;
+    position: relative;
+}
+
+.icon-search {
+    width: .16rem;
+    height: .14rem;
+    background-position: -1rem -2.2rem;
+    position: absolute;
+    margin: 0.12rem 0;
+    left: 30%;
+}
+
+.ui-searchbar-text {
+    font-size: .14rem;
+    color: #989898;
+    text-align: center;
+}
+
+.ui-problemlist {
+    background-color: #ededed;
+}
+
+.ui-marginbottom {
+    border-bottom: 1px solid #ededed;
+}
+
+.ui-problem {
+    margin-bottom: 0.08rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.ui-proname {
+    font-size: .13rem;
+    width: .9rem;
+    text-align: center;
+    border-right: 1px solid #ededed;
+    background-color: #f9fcf8;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+}
+
+.ui-proname-inner {
+    /* position: absolute; */
+    position: absolute;
+    top: 50%;
+    margin: -.15rem .18rem 0;
+}
+
+.ui-proitem {
+    font-size: .15rem;
+    background-color: #fff;
+}
+
+.ui-proitemargin {
+    margin-left: .9rem;
+}
+
+.border-top {
+    border-top: 1px solid #ededed;
+}
+
+.ui-proitem li {
+    height: .4rem;
+    line-height: .4rem;
+    border-bottom: 1px solid #ededed;
+    overflow: hidden;
+}
+
+.ui-proitem li a {
+    display: block;
+    padding-left: 0.16rem;
+    color: #4d4d4d;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ui-proitem li:last-child {
+    border-bottom: none;
+}
+
+.icon-dots {
+    background-position: -1.54rem -1rem;
+    width: .18rem;
+    height: 0.07rem;
+}
+
+.ui-proname-title {
+    color: #399026
+}
+
+.ui-blank {
+    height: .18rem;
+    width: 100%;
+    background-color: #fff;
+}
+
+
+/* index end */
+
+
+/* 搜索开始 */
+
+.ui-searchbar-input {
+    padding-left: .44rem;
+    position: relative;
+    padding-right: .34rem;
+    display: none
+}
+
+.ui-searchbar-input .icon-search {
+    left: .2rem
+}
+
+.ui-searchbar-input input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.icon-close {
+    background-position: -.18rem -2.8rem;
+    width: .18rem;
+    height: .2rem;
+    position: absolute;
+    right: .1rem;
+    top: 0;
+    display: none;
+    margin: .1rem 0;
+}
+
+.ui-empty {
+    text-align: center;
+    display: block;
+    font-size: .14rem;
+    color: #989898;
+}
+
+.ui-push {
+    margin-top: 1.26rem;
+    margin-bottom: 1rem;
+}
+
+h2.ui-space {
+    margin-bottom: .18rem;
+}
+
+.icon-aset {
+    /* background-position: -1.55rem -1.85rem; */
+    background-position: -1.1rem -1.85rem;
+    width: .14rem;
+    height: 0.08rem;
+    margin-top: .28rem;
+    display: none;
+}
+
+
+/* 搜索结束 */
+
+
+/* 问题解答 start */
+
+.ui-solve-title {
+    font-size: .19rem;
+    line-height: .24rem;
+    padding-top: .14rem;
+    padding-bottom: .14rem;
+    margin-left: .22rem;
+    padding-right: .16rem;
+    border-bottom: 1px solid #ededed;
+    color: rgb(77, 77, 77)
+}
+
+.ui-midgreen {
+    color: #399026;
+}
+
+.ui-describe {
+    font-size: .16rem;
+    /* margin-left: .3rem; */
+    margin-bottom: .44rem;
+}
+
+.m-answer {
+    padding: .24rem .1rem .24rem 0;
+    /* margin-left: .3rem; */
+    border-bottom: 1px solid #ededed;
+}
+.m-ansewerinner{
+    margin-left: .3rem;
+    padding-top: .1rem;
+}
+.m-question {
+    margin-left: .21rem;
+    color: #989898;
+    padding: .15rem 0;
+    border-bottom: 1px solid #ededed;
+    font-size: .15rem;
+}
+
+.ui-describe-answer {
+    text-indent: .15rem;
+    line-height: .25rem;
+    margin-bottom: .12rem;
+}
+
+.ui-describe-tag {
+    margin-bottom: .1rem;
+    font-weight: normal;
+}
+
+.ui-btnlist {
+    margin-bottom: 1.15rem;
+}
+
+.ui-btnwrap {
+    font-size: .15rem;
+    margin: 0 .22rem;
+}
+
+.ui-btn {
+    width: 1.5rem;
+    height: .42rem;
+    line-height: .42rem;
+    /* display: inline-block; */
+    float: left;
+    text-align: center;
+}
+
+.ui-btn-lightblue {
+    border: 1px solid #5bb647;
+    color: #5bb647;
+}
+
+.ui-btn-gray {
+    background-color: #ededed;
+    color: #4d4d4d;
+    margin-right: .3rem;
+}
+
+.ui-related-title {
+    margin-left: .22rem;
+    padding-left: 0.09rem;
+    font-size: .15rem;
+    border-left: 3px solid #ee780c;
+    margin-bottom: 0.05rem;
+}
+
+.icon-zan {
+    background-position: -1.52rem -3.48rem;
+    width: .26rem;
+    height: .26rem;
+    margin-right: .13rem;
+    vertical-align: middle;
+    margin-top: -0.08rem;
+}
+
+.ui-related-qus {
+    margin-bottom: 1.24rem;
+}
+
+.ui-related-col {
+    height: .44rem;
+    line-height: .44rem;
+    margin-left: .24rem;
+    border-bottom: 1px solid #ededed;
+    font-size: .16rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ui-second-col {
+    padding-right: .18rem;
+}
+
+.icon-arrl{
+    background-position: -1.6rem -1.4rem;
+    width: 0.08rem;
+    height: 0.15rem;
+    position: absolute;
+    right: 0;
+    top: .14rem;
+}
+
+.ui-describe-answer img{
+    width: 100%;
+    display: block;
+}
+.ui-related-col a {
+    display: block;
+    color: #4d4d4d;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+}
+/* 问题解答 end */
+
+
+/* 反馈开始 */
+
+.ui-textare {
+    font-size: .16rem;
+    padding: 0.08rem 0;
+    background-color: #f8f8f8;
+}
+
+.ui-from-textare {
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    text-indent: .15rem;
+    padding-top: .15rem;
+    height: 2rem;
+    overflow-y: auto;
+    border: none;
+    resize : none;
+}
+
+.ui-submitbtn-block {
+    margin: .26rem .22rem;
+    font-size: .15rem;
+    text-align: center
+}
+
+.ui-submitbtn {
+    display: block;
+    color: #4d4d4d;
+    padding: .14rem 0;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: #fff;
+}
+
+a.ui-submitbtn-success {
+    background-color: rgb(91, 182, 71);
+    color: #fff;
+    border: none;
+}
+
+.ui-mask {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: .64rem;
+    bottom: 0;
+}
+
+.ui-bg {
+    z-index: 9999;
+    background-color: rgb(149, 149, 149);
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    top: 0;
+}
+
+.ui-remind-status {
+    font-size: .16rem;
+    color: rgb(91, 182, 71);
+    position: absolute;
+    z-index: 99999;
+    width: 1.22rem;
+    height: .98rem;
+    background-color: rgb(253, 253, 253);
+    left: 50%;
+    top: 50%;
+    margin-top: -.46rem;
+    margin-left: -.61rem;
+    text-align: center;
+    border-radius: .1rem;
+}
+
+
+/* 反馈结束 */
+
+
+/* 常见问题列表开始 */
+
+.ui-nofound {
+    font-size: .12rem;
+    margin-top: .8rem;
+    text-align: center;
+}
+div.ui-nofoundtroble{
+    margin-top: .26rem;
+}
+.ui-nofound-des {
+    color: #989898;
+    margin-bottom: .12rem;
+}
+
+.ui-nofound a {
+    color: #ff2e63;
+}
+
+
+/* 常见问题列表结束 */
+
+
+/* 人力资源问题 */
+
+.ui-more {
+    margin-top: .12rem;
+    color: #989898;
+    font-size: .12rem;
+    text-align: center;
+}
+
+.icon-more {
+    background-position: -1.07rem -3.04rem;
+    width: .25rem;
+    height: .25rem;
+    margin-top: .12rem;
+}
+
+
+/* 人力资源问题 */
+
+
+/* 我的请求开始 */
+
+.allreq {
+    font-size: .14rem;
+    color: #989898;
+    position: absolute;
+    right: .17rem;
+    top: 0
+}
+
+.ui-header-nav {
+    height: .46rem;
+    background-color: #f7fbf6;
+    font-size: .14rem;
+    width: 100%;
+    border-bottom: 1px solid #ededed;
+}
+
+.req-item a {
+    display: block;
+    width: .45rem;
+    text-align: center;
+    margin: auto;
+    color: #6b6b6b;
+}
+
+a.active {
+    border-bottom: 0.03rem solid #5bb647;
+    color: #5bb647;
+    line-height: .43rem;
+}
+
+.ui-header-nav li {
+    float: left;
+    line-height: .46rem;
+    width: 25%;
+    min-width: .45rem;
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    font-size: .12rem;
+    display: none;
+    border-bottom: 1px solid #fff;
+}
+.timeline.active{
+    display: block;
+}
+.timeline li:first-child {
+    padding-top: .36rem;
+}
+
+.timeline:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0.01rem;
+    background: #ddd;
+    margin: 0;
+    border-radius: 2px;
+    left: .84rem;
+}
+.status-dot:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0.08rem;
+    height: 0.08rem;
+    background-color: #f74c31;
+    border-radius: 0.05rem;
+    right: .2rem;
+    top: .14rem;
+}
+.ui-re-time {
+    width: .84rem;
+    text-align: center;
+    float: left;
+}
+
+.ui-re-status {
+    margin-left: .84rem;
+    padding-left: .24rem;
+    position: relative;
+}
+
+.ui-re-status:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 0.07rem;
+    height: 0.07rem;
+    -webkit-border-radius: 0.1rem;
+    z-index: 9999;
+    left: -0.03rem;
+    top: .14rem;
+    background-color: #4d4d4d;
+}
+
+.ui-requested:before {
+    background-color: #5bb647;
+}
+
+.ui-request:before {
+    background-color: #9253f0;
+}
+
+.ui-requesting:before {
+    background-color: #4aa2f1
+}
+
+.ui-requestfeed:before {
+    background-color: #cb43b5
+}
+
+.ui-re-statusinner {
+    background-color: #f8f8f8;
+    margin-right: .17rem;
+    margin-bottom: .22rem;
+    padding: .21rem 0.09rem .16rem .14rem;
+    border-radius: 0.04rem;
+    position: relative;
+}
+
+.ui-re-statusinner:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: -0.04rem;
+    top: .14rem;
+    border-top: 0.05rem solid transparent;
+    border-right: 0.05rem solid #f8f8f8;
+    border-bottom: 0.05rem solid transparent;
+}
+
+.ui-day {
+    color: #010101;
+}
+
+.ui-requested-title {
+    font-size: .16rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    color: #4d4d4d;
+    margin-bottom: .25rem;
+}
+.ui-unread{
+    color: #399026;
+}
+.ui-date {
+    color: #686868;
+}
+
+.ui-re-progress {
+    text-align: center;
+}
+
+.ui-rate {
+    margin-left: .21rem;
+    height: .44rem;
+    line-height: .44rem;
+    border-bottom: 1px solid #ededed;
+    color: #989898;
+    font-size: .14rem;
+    padding-right: .3rem;
+}
+
+i.icon-liked {
+    background-position: -.18rem -2.18rem;
+}
+
+.icon-like {
+    background-position: -.55rem -2.18rem;
+    width: .23rem;
+    margin-top: 0.1rem;
+    height: .22rem;
+}
+
+.icon-master {
+    background-position: -1.43rem -2.7rem;
+    width: .32rem;
+    height: .35rem;
+}
+
+.icon-success {
+    background-position: -1.2rem -.18rem;
+    margin-top: .2rem;
+    margin-bottom: .12rem;
+    width: .34rem;
+    height: .24rem;
+}
+
+.icon-load {
+    background-position: -.47rem -3.45rem;
+    width: .326rem;
+    height: .34rem;
+    margin-top: .19rem;
+    margin-bottom: 0.09rem;
+}
+
+
+/* 我的请求结束 */
+
+
+/* 未响应的开始 */
+
+.ui-unrequest-title {
+    font-size: .12rem;
+    color: #989898;
+    margin-bottom: .12rem;
+}
+
+.ui-unrequest-tag {
+    padding-top: .2rem;
+    margin-left: .21rem;
+    padding-bottom: .28rem;
+    border-bottom: 1px solid #ededed;
+}
+
+.ui-gray {
+    color: #989898!important
+}
+
+.ui-unrequest-txt {
+    font-size: .16rem;
+    color: rgb(84, 84, 84);
+    line-height: .32rem;
+}
+
+.ui-editorbtn {
+    margin-top: .26rem;
+    margin-bottom: 1.47rem;
+    margin: .26rem .22rem 1.47rem;
+}
+
+.ui-editorbtn-block {
+    background-color: rgb(91, 182, 71);
+    color: #fff;
+    display: block;
+    font-size: .16rem;
+    height: .42rem;
+    line-height: .42rem;
+    text-align: center;
+}
+
+.ui-img img {
+    float: left;
+    margin-right: 0.08rem;
+    margin-bottom: 0.08rem;
+    display: block;
+}
+
+.ui-contactway {
+    margin-right: .24rem;
+}
+
+
+/* 未响应结束 */
+
+
+/* 我要提问开始 */
+
+.ui-question-bg {
+    background-color: #ededed!important
+}
+
+.ui-question-tag {
+    height: .46rem;
+    line-height: .46rem;
+    padding-left: .24rem;
+    padding-right: .18rem;
+    font-size: .16rem;
+}
+
+.ui-question-tag a {
+    color: #4d4d4d;
+    display: block;
+    position: relative;
+}
+
+.ui-qsecond {
+    font-size: .14rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: .5rem;
+}
+
+.ui-hgreen {
+    color: #399026;
+}
+
+.ui-label {
+    width: .6rem;
+    line-height: .44rem;
+    position: absolute;
+}
+
+a.ui-qbtnsave {
+    background-color: #5bb647;
+    color: #fff;
+    border: none;
+}
+
+.ui-panel {
+    background-color: #fff;
+    margin: 0.08rem 0;
+}
+
+.ui-qinput {
+    height: .46rem;
+}
+
+.ui-question-panel {
+    font-size: .16rem;
+}
+
+.ui-qtextarea {
+    width: 100%;
+    height: 1rem;
+}
+
+.ui-qtextarea textarea {
+    width: 100%;
+    height: 1rem;
+    outline: none;
+    border: none;
+    padding-top: .1rem;
+    padding-left: .24rem;
+    resize : none;
+}
+
+.ui-qinput {
+    padding-left: .24rem;
+    line-height: .46rem;
+    border-bottom: 1px solid #ededed;
+}
+
+.ui-qinput input {
+    width: 100%;
+    padding-left: .6rem;
+    border: 0;
+}
+
+.ui-qword {
+    margin-left: .24rem;
+    border-bottom: 1px solid #ededed;
+    padding: .1rem 0;
+    /* margin-right: .18rem; */
+    font-size: .14rem;
+    color: #989898;
+    letter-spacing: 0.02rem
+}
+
+.ui-qwordblock {
+    margin-right: .18rem;
+}
+
+.ui-qplugin {
+    padding: .12rem 0;
+    margin-left: .24rem;
+}
+
+.icon-add {
+    background-position: -.21rem -1.2rem;
+    width: .56rem;
+    height: .56rem;
+}
+
+.ui-qcontact-title {
+    font-size: .14rem;
+    color: #989898;
+    margin-left: .24rem;
+    padding-top: .18rem;
+}
+
+.ui-qbtninner {
+    /* padding-left: .22rem; */
+    margin: 0 .2rem;
+    padding-bottom: .7rem;
+}
+
+.ui-qbtn {
+    background-color: #fff;
+    padding-top: .26rem;
+}
+
+.ui-qbtnitem {
+    width: 1.5rem;
+    height: .42rem;
+    line-height: .42rem;
+    /* float: left; */
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    color: #4d4d4d;
+}
+
+.ui-qbtn a:first-child {
+    margin-right: .3rem;
+}
+
+.ui-qbtndisable {
+    background-color: #fff;
+    color: #bababa;
+}
+
+.icon-require {
+    color: red;
+    margin-right: 0.06rem;
+    vertical-align: middle;
+    display: inline-block;
+}
+.icon-blank{
+    width: 0.05rem; 
+}
+.ui-qstab {
+    width: .9rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    font-size: .12rem;
+    color: #6b6b6b;
+    border-right: 1px solid #ededed;
+}
+
+.ui-qstab-item.active {
+    color: #399026
+}
+
+.ui-qscontent li.ui-qscategory {
+    font-size: .14rem;
+    color: #989898;
+}
+
+.ui-qscontent-list {
+    margin-left: .9rem;
+}
+
+.ui-qscontent li {
+    height: .44rem;
+    line-height: .44rem;
+    padding-left: .16rem;
+    border-bottom: 1px solid #ededed;
+    color: #4d4d4d;
+}
+
+.ui-qstab-item {
+    height: .75rem;
+    border-bottom: 1px solid #ededed;
+    background-color: #f9fcf8;
+    line-height: .75rem;
+    text-align: center;
+}
+
+.ui-qscontent {
+    display: none;
+    font-size: .16rem;
+}
+.ui-qscontent.active{
+    display: block;
+}
+.ui-remind-dialog {
+    width: 2.66rem;
+    height: 1.9rem;
+    font-size: .16rem;
+    background-color: rgb(253, 253, 253);
+    position: absolute;
+    z-index: 99999;
+    left: 50%;
+    top: 50%;
+    margin-left: -1.33rem;
+    margin-top: -.95rem;
+    text-align: center;
+    border-radius: 0.04rem;
+}
+
+.ui-dialog-tip {
+    color: #ee780c;
+    width: 2.15rem;
+    margin: .35rem auto;
+    text-align: center;
+    line-height: .24rem;
+}
+
+.ui-dialog-btn {
+    width: .9rem;
+    height: .38rem;
+    background-color: #ededed;
+    color: #4d4d4d;
+    text-align: center;
+    line-height: .38rem;
+    display: inline-block;
+}
+
+.ui-dialog-btn:first-child {
+    margin-right: .29rem;
+}
+
+
+/* 我要提问结束 */
+
+
+/* 我的草稿开始 */
+
+.draf-content {
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.draf-item {
+    height: .44rem;
+    line-height: .44rem;
+    background-color: #fff;
+    margin-bottom: 0.08rem;
+    font-size: .16rem;
+    padding-left: .24rem;
+    position: relative;
+    padding-right: .36rem;
+}
+
+.icon-editor {
+    background-position: -1.55rem -2.15rem;
+    width: .16rem;
+    height: .18rem;
+    position: absolute;
+    right: .18rem;
+    top: .12rem;
+    overflow: hidden;
+}
+
+.draf-item:first-child {
+    margin-top: 0.08rem;
+}
+
+.draf-item a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    color: #4d4d4d;
+}
+
+
+/* 我的草稿结束 */
+
+.fl {
+    float: left!important;
+}
+
+.fr {
+    float: right!important;
+}
