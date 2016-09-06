@@ -296,8 +296,8 @@ html {
 }
 
 .icon-dots {
-    background-position: -1.54rem -1rem;
-    width: .18rem;
+    background-position: -1.53rem -1rem;
+    width: .2rem;
     height: 0.07rem;
 }
 
@@ -417,6 +417,7 @@ h2.ui-space {
 .ui-describe-answer {
     line-height: .25rem;
     margin-bottom: .12rem;
+    color: #545454;
 }
 
 .ui-describe-tag {
@@ -446,6 +447,10 @@ h2.ui-space {
    border: 2px solid #5bb647;
    color: #5bb647;
    font-weight: bold;
+}
+.ui-btn-lightblue.ui-zaned{
+    border: 1px solid #bababa;
+    color: #bababa;
 }
 .ui-btn-blue{
     background-color: #5bb647;
@@ -504,6 +509,7 @@ h2.ui-space {
 .ui-describe-answer img{
     width: 100%;
     display: block;
+    margin-top: .18rem;
 }
 .ui-related-col a {
     display: block;
@@ -561,7 +567,7 @@ a.ui-submitbtn-success {
     width: 100%;
     position: absolute;
     left: 0;
-    top: .64rem;
+    top: .44rem;
     bottom: 0;
 }
 
@@ -1192,6 +1198,9 @@ a.ui-qbtnsave {
 
 /* 我的草稿结束 */
 
+.ui-related-list a:active,ui-proitem a:active{
+    color: #399026
+}
 .fl {
     float: left!important;
 }
