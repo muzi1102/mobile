@@ -10,6 +10,24 @@ html {
     background-size: 2.03rem 4.23rem;
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2) {
+    .iconfont {
+        background-image: url('../img/UI02.png');
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (min--moz-device-pixel-ratio: 3),
+only screen and (-o-min-device-pixel-ratio: 3/1),
+only screen and (min-device-pixel-ratio: 3) {
+    .iconfont {
+        background-image: url('../img/UI03.png');
+    }
+}
+
 .icon-left {
     width: 0.09rem;
     height: 0.16rem;
@@ -71,7 +89,7 @@ html {
     margin-top: 0.03rem;
 }
 
-.message-dot:after{
+.message-dot:after {
     content: '';
     position: absolute;
     display: block;
@@ -81,7 +99,6 @@ html {
     border-radius: 0.05rem;
     right: .48rem;
     top: -.02rem;
-
 }
 
 .nav {
@@ -399,12 +416,14 @@ h2.ui-space {
 .m-answer {
     padding: .12rem .22rem 0 0;
 }
-.m-ansewerinner{
+
+.m-ansewerinner {
     margin-left: .22rem;
     padding-top: .1rem;
     padding-bottom: .24rem;
     border-bottom: 1px solid #ededed;
 }
+
 .m-question {
     margin-left: .21rem;
     color: #989898;
@@ -444,18 +463,21 @@ h2.ui-space {
 }
 
 .ui-btn-lightblue {
-   border: 2px solid #5bb647;
-   color: #5bb647;
-   font-weight: bold;
+    border: 2px solid #5bb647;
+    color: #5bb647;
+    font-weight: bold;
 }
-.ui-btn-lightblue.ui-zaned{
+
+.ui-btn-lightblue.ui-zaned {
     border: 1px solid #bababa;
     color: #bababa;
 }
-.ui-btn-blue{
+
+.ui-btn-blue {
     background-color: #5bb647;
     color: #fff;
 }
+
 .ui-btn-gray {
     background-color: #ededed;
     color: #4d4d4d;
@@ -497,7 +519,7 @@ h2.ui-space {
     padding-right: .18rem;
 }
 
-.icon-arrl{
+.icon-arrl {
     background-position: -1.6rem -1.4rem;
     width: 0.08rem;
     height: 0.15rem;
@@ -506,11 +528,12 @@ h2.ui-space {
     top: .14rem;
 }
 
-.ui-describe-answer img{
+.ui-describe-answer img {
     width: 100%;
     display: block;
     margin-top: .18rem;
 }
+
 .ui-related-col a {
     display: block;
     color: #4d4d4d;
@@ -520,6 +543,8 @@ h2.ui-space {
     position: relative;
     padding-right: .54rem;
 }
+
+
 /* 问题解答 end */
 
 
@@ -540,7 +565,7 @@ h2.ui-space {
     height: 2rem;
     overflow-y: auto;
     border: none;
-    resize : none;
+    resize: none;
 }
 
 .ui-submitbtn-block {
@@ -609,9 +634,11 @@ a.ui-submitbtn-success {
     margin-top: .8rem;
     text-align: center;
 }
-div.ui-nofoundtroble{
+
+div.ui-nofoundtroble {
     margin-top: .26rem;
 }
+
 .ui-nofound-des {
     color: #989898;
     margin-bottom: .12rem;
@@ -691,9 +718,11 @@ a.active {
     display: none;
     border-bottom: 1px solid #fff;
 }
-.timeline.active{
+
+.timeline.active {
     display: block;
 }
+
 .timeline li:first-child {
     padding-top: .36rem;
 }
@@ -709,7 +738,8 @@ a.active {
     border-radius: 2px;
     left: .84rem;
 }
-.status-dot:after{
+
+.status-dot:after {
     content: '';
     position: absolute;
     display: block;
@@ -720,6 +750,7 @@ a.active {
     right: .2rem;
     top: .14rem;
 }
+
 .ui-re-time {
     width: .84rem;
     text-align: center;
@@ -794,9 +825,11 @@ a.active {
     color: #4d4d4d;
     margin-bottom: .25rem;
 }
-.ui-unread{
+
+.ui-unread {
     color: #399026;
 }
+
 .ui-date {
     color: #686868;
 }
@@ -978,7 +1011,7 @@ a.ui-qbtnsave {
     border: none;
     padding-top: .1rem;
     padding-left: .24rem;
-    resize : none;
+    resize: none;
 }
 
 .ui-qinput {
@@ -1061,9 +1094,11 @@ a.ui-qbtnsave {
     vertical-align: middle;
     display: inline-block;
 }
-.icon-blank{
-    width: 0.05rem; 
+
+.icon-blank {
+    width: 0.05rem;
 }
+
 .ui-qstab {
     width: .9rem;
     position: absolute;
@@ -1108,9 +1143,11 @@ a.ui-qbtnsave {
     display: none;
     font-size: .16rem;
 }
-.ui-qscontent.active{
+
+.ui-qscontent.active {
     display: block;
 }
+
 .ui-remind-dialog {
     width: 2.66rem;
     height: 1.9rem;
@@ -1198,9 +1235,6 @@ a.ui-qbtnsave {
 
 /* 我的草稿结束 */
 
-.ui-related-list a:active,ui-proitem a:active{
-    color: #399026
-}
 .fl {
     float: left!important;
 }
