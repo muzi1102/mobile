@@ -15,32 +15,73 @@ $(function() {
     $('#j-zan').on('click', function() {
             $(this).html('谢谢你的赞').addClass('ui-zaned').children().remove();
         })
-    // 提交反馈文本框输入问题，按钮样式改变
-   	$('#J-from-textare').on('keyup',function(){
-   		var val=$(this).val();
-   			if (getStrlen(val)) {
-   				$('.ui-submitbtn').addClass('ui-submitbtn-success')
-   			}else{
-   				$('.ui-submitbtn').removeClass('ui-submitbtn-success')
-   			}
-   	})
-   	// 我要提问的文本框输入显示剩余多少文字
-   	$('#J-remaintxt').on('input',function(){
-   		var val=$(this).val(),
-   			count=getStrlen(val);
-   		$('#J-counter').text(count);
-   	})
-   	// 判断字数的函数
+        // 提交反馈文本框输入问题，按钮样式改变
+    $('#J-from-textare').on('keyup', function() {
+            var val = $(this).val();
+            if (getStrlen(val)) {
+                $('.ui-submitbtn').addClass('ui-submitbtn-success')
+            } else {
+                $('.ui-submitbtn').removeClass('ui-submitbtn-success')
+            }
+        })
+        // 我要提问的文本框输入显示剩余多少文字
+    $('#J-remaintxt').on('input', function() {
+            var val = $(this).val(),
+                count = getStrlen(val);
+            $('#J-counter').text(count);
+        })
+        // 判断字数的函数
     function getStrlen(str) {
         var myLen = 0,
             i = 0;
-        for (;(i < str.length); i++) {
+        for (;
+            (i < str.length); i++) {
             if (str.charCodeAt(i) > 0 && str.charCodeAt(i) < 128)
                 myLen++;
             else
                 myLen += 2;
         }
-        myLen=Math.ceil(myLen / 2);
+        myLen = Math.ceil(myLen / 2);
         return myLen;
     }
+    // 首页搜索点击快点，点我搜素
+    $('.ui-searchbar-text').on('click', function() {
+        $(this).prev().hide();
+        $(this).hide().next().show().next().show();
+        $('.ui-searchbar-input input').focus();
+        $('.icon-close').on('click', function() {
+            $('.ui-searchbar-input input').val('')
+        })
+    });
+    // 搜索猜你喜欢问题展开；
+    (function() {
+        $('.ui-proitem').each(function() {
+            var proH = $(this).height();
+            var flag=true;
+            if (proH > 120) {
+                $(this).css({
+                    height: '120px',
+                    overflow: 'hidden'
+                })
+                $(this).prev().find('.ui-push-more').css({
+                    display: 'block'
+                })
+                $(this).prev().find('.ui-push-more').on('click', function(e) {
+                    e.preventDefault();
+                    $(this).toggleClass('morepro');
+                    if (flag) {
+                        $(this).parents('.ui-proname').next().animate({
+                            height: proH
+                        }, 'normal', 'linear');
+                        flag=false;
+                    } else {
+                        $(this).parents('.ui-proname').next().animate({
+                            height: 120
+                        }, 'normal', 'linear')
+                        flag=true;
+                    }
+                })
+            }
+        })
+    })()
 })

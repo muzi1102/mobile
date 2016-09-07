@@ -26,17 +26,19 @@
     <!-- header end -->
     <!-- 中间内容开始  -->
     <div class="ui-content ui-inner-content">
-        <div class="ui-textare">
-            <textarea name="" placeholder="请输入未解决问题的原因，并反馈给我们" class="ui-from-textare"></textarea>
-        </div>
-        <!-- ui-submitbtn是不可提交反馈按钮的禁用 -->
-        <!-- ui-submitbtn-success是可提交按钮的样式 -->
-        <div class="ui-submitbtn-block">
-            <a href="" class="ui-submitbtn ui-submitbtn-success">提交</a>
-        </div>
+        <form action="">
+            <div class="ui-textare">
+                <textarea name="" placeholder="请输入未解决问题的原因，并反馈给我们" class="ui-from-textare" id="J-from-textare"></textarea>
+            </div>
+            <!-- ui-submitbtn是不可提交反馈按钮的禁用 -->
+            <!-- ui-submitbtn-success是可提交按钮的样式 -->
+            <div class="ui-submitbtn-block">
+                <a href="javascript:;" class="ui-submitbtn">提交</a>
+            </div>
+        </form>
     </div>
     <!-- 弹出的遮罩层 -->
-    <div class="ui-mask">
+      <div class="ui-mask">
         <div class="ui-bg"></div>
         <div class="ui-remind-status">
             <i class="iconfont icon-success"></i>
@@ -45,5 +47,8 @@
     </div>
     <!-- 中间内容结束 -->
 </body>
+<script type="text/javascript" src="js/adapter.js"></script>
+<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+
 </html>

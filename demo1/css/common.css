@@ -273,12 +273,13 @@ only screen and (min-device-pixel-ratio: 3) {
 }
 
 .ui-proname-inner {
-    /* position: absolute; */
     position: absolute;
     top: 50%;
     margin: -.15rem .18rem 0;
 }
-
+.ui-proname-inner.ui-proname-difinner{
+     margin: -.225rem .18rem 0;
+}
 .ui-proitem {
     font-size: .15rem;
     background-color: #fff;
@@ -379,15 +380,21 @@ h2.ui-space {
 }
 
 .icon-aset {
-    /* background-position: -1.55rem -1.85rem; */
     background-position: -1.1rem -1.85rem;
     width: .14rem;
     height: 0.08rem;
-    margin-top: .28rem;
-    display: none;
+    margin: .2rem auto;
 }
 
-
+.ui-push-more{
+    display: none;
+}
+.ui-proname-inner.ui-push-proinner{
+    margin: -0.075rem .18rem 0;
+}
+.morepro .icon-aset{
+    background-position: -1.55rem -1.85rem;
+}
 /* 搜索结束 */
 
 
