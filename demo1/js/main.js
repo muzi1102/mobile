@@ -57,7 +57,6 @@ $(function() {
     (function() {
         $('.ui-proitem').each(function() {
             var proH = $(this).height();
-            console.log(proH);
             var flag=true;
             if (proH > 120) {
                 $(this).css({
@@ -70,18 +69,14 @@ $(function() {
                 $(this).prev().find('.ui-push-more').on('click', function(e) {
                     e.preventDefault();
                     $(this).toggleClass('morepro');
-                    if (flag) {
-                        $(this).parents('.ui-proname').next().stop().animate({
+                    if ($(this).hasClass('morepro')) {
+                         $(this).parents('.ui-proname').next().stop().animate({
                             height: proH
                         }, 'normal', 'linear');
-                        flag=false;
-                        console.log('a')
-                    } else {
+                    }else{
                         $(this).parents('.ui-proname').next().stop().animate({
                             height: 1.2+'rem'
                         }, 'normal', 'linear')
-                        flag=true;
-                        console.log('b')
                     }
                 })
             }
