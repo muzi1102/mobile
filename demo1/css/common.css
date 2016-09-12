@@ -968,13 +968,17 @@ i.icon-liked {
     display: block;
     position: relative;
 }
-
+.ui-qfirst{
+    position: absolute;
+}
 .ui-qsecond {
     font-size: .14rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin-left: .5rem;
+    margin-left: 1.4rem;
+    display: block;
+    padding-right: .15rem;
 }
 
 .ui-hgreen {

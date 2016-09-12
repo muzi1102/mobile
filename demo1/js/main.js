@@ -57,10 +57,11 @@ $(function() {
     (function() {
         $('.ui-proitem').each(function() {
             var proH = $(this).height();
+            console.log(proH);
             var flag=true;
             if (proH > 120) {
                 $(this).css({
-                    height: '120px',
+                    height: '1.2rem',
                     overflow: 'hidden'
                 })
                 $(this).prev().find('.ui-push-more').css({
@@ -70,18 +71,24 @@ $(function() {
                     e.preventDefault();
                     $(this).toggleClass('morepro');
                     if (flag) {
-                        $(this).parents('.ui-proname').next().animate({
+                        $(this).parents('.ui-proname').next().stop().animate({
                             height: proH
                         }, 'normal', 'linear');
                         flag=false;
+                        console.log('a')
                     } else {
-                        $(this).parents('.ui-proname').next().animate({
-                            height: 120
+                        $(this).parents('.ui-proname').next().stop().animate({
+                            height: 1.2+'rem'
                         }, 'normal', 'linear')
                         flag=true;
+                        console.log('b')
                     }
                 })
             }
         })
     })()
+    // 清空历史记录
+    $('.ui-empty').on('click',function(){
+        $(this).parents('.ui-related-list').remove();
+    })
 })
