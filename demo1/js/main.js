@@ -57,8 +57,8 @@ $(function() {
     (function() {
         $('.ui-proitem').each(function() {
             var proH = $(this).height();
-            var flag=true;
-            if (proH > 120) {
+            var colH=$(this).find('li').height()*3+3;
+            if (proH > colH) {
                 $(this).css({
                     height: '1.2rem',
                     overflow: 'hidden'
@@ -73,10 +73,12 @@ $(function() {
                          $(this).parents('.ui-proname').next().stop().animate({
                             height: proH
                         }, 'normal', 'linear');
+                         // console.log('a')
                     }else{
                         $(this).parents('.ui-proname').next().stop().animate({
                             height: 1.2+'rem'
-                        }, 'normal', 'linear')
+                        }, 'normal', 'linear');
+                        // console.log('b');
                     }
                 })
             }
