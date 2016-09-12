@@ -71,7 +71,7 @@ $(function() {
                     $(this).toggleClass('morepro');
                     if ($(this).hasClass('morepro')) {
                          $(this).parents('.ui-proname').next().stop().animate({
-                            height: proH
+                            height: proH/100+'rem'
                         }, 'normal', 'linear');
                          // console.log('a')
                     }else{
