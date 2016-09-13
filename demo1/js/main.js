@@ -110,21 +110,20 @@ $(function() {
         }).on('touchend',function(e){
             // var left = parseInt(e.currentTarget.style.left)
             var left=$(e.currentTarget).position().left/100;
-            console.log(left);
             var new_left;
-            if (left < -.35) {
+            if (left < -.45) {
                 new_left = '-.54rem'
-            } else if (left > .35) {
+            } else if (left > .45) {
                 new_left = '.54rem';
             } else {
                 new_left = '0'
             }
-            $(e.currentTarget).animate({left: new_left}, 200)
+            $(e.currentTarget).animate({left: new_left}, 100)
             enable_scroll()
         })
         $('.draf-item .deletebtn').on('touchend',function(e){
             e.preventDefault();
-            $(this).parents('li').slideUp('fast',function(){
+            $(this).parents('li').slideUp('normal',function(){
                 $(this).remove()
             })
         })
