@@ -104,6 +104,7 @@ $(function() {
             $(this).css({left:'0'});
             x = e.originalEvent.targetTouches[0].pageX
         }).on('touchmove',function(e){
+            e.preventDefault();
              var change = e.originalEvent.targetTouches[0].pageX - x
             change = Math.min(Math.max(-54, change), 0) // restrict to -54 left, 0 right
             e.currentTarget.style.left = change/100 + 'rem';
