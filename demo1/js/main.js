@@ -54,10 +54,8 @@ $(function() {
         })
     });
     // 搜索猜你喜欢问题展开；
-    // (function() {
-        
-    // })()
-    $('.ui-proitem').each(function() {
+    (function() {
+        $('.ui-proitem').each(function() {
             var proH = $(this).height();
             var colH=$(this).find('li').height()*3+3;
             if (proH > colH) {
@@ -83,6 +81,8 @@ $(function() {
                 })
             }
         })
+    })()
+    
     // 清空历史记录
     $('.ui-empty').on('click',function(){
         $(this).parents('.ui-related-list').remove();
