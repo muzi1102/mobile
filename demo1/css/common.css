@@ -462,7 +462,7 @@ h2.ui-space {
 }
 
 .ui-btn {
-    width: 1.5rem;
+    width: 1.45rem;
     height: .42rem;
     line-height: .42rem;
     float: left;
@@ -1208,6 +1208,7 @@ a.ui-qbtnsave {
     top: 0;
     left: 0;
     right: 0;
+    overflow: hidden;
 }
 
 .draf-item {
@@ -1219,6 +1220,7 @@ a.ui-qbtnsave {
     padding-left: .24rem;
     position: relative;
     padding-right: .36rem;
+    overflow: hidden;
 }
 
 .icon-editor {
@@ -1242,8 +1244,47 @@ a.ui-qbtnsave {
     display: block;
     color: #4d4d4d;
 }
+.removebtn{
+    position: absolute;
+    top: 0;
+    right: -.54rem;
+    background-color: #ee780c;
+    color: #fff;
+    font-size: .14rem;
+    width: .54rem;
+    text-align: center;
+}
 
 
+.list-li{ 
+    line-height: .44rem; 
+    height: .44rem;
+    position:relative;
+    padding-left: .24rem;
+    padding-right: .54rem;
+    color: #4d4d4d;
+    background: #fff;
+    font-size: .14rem;
+    margin-bottom: 0.08rem;
+}
+.list-li:first-child {
+    margin-top: 0.08rem;
+}
+.list-li a{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    color: #4d4d4d;
+}
+.btn{ 
+    position: absolute;
+    top: 0;
+    right: -.54rem; 
+    text-align: center; 
+    background-color: #ee780c; 
+    color: #fff; width: .54rem
+}
 /* 我的草稿结束 */
 
 .fl {
