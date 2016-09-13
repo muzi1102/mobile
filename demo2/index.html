@@ -1,18 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>手势事件</title>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="telephone=no" /><title>html5苹果手机向左滑动删除特效 - 站长素材</title>
+
+<style>
+    *{ padding:0; margin:0; list-style: none;}
+    header{ background: #f7483b; border-bottom: 1px solid #ccc}
+    header h2{ text-align: center; line-height: 54px; font-size: 16px; color: #fff}
+    .list-ul{ overflow: hidden}
+    .list-li{ line-height: 60px; border-bottom: 1px solid #fcfcfc; position:relative;padding: 0 12px; color: #666;
+        background: #f2f2f2;
+        -webkit-transform: translateX(0px);
+    }
+    .btn{ position: absolute; top: 0; right: -80px; text-align: center; background: #ffcb20; color: #fff; width: 80px}
+</style>
+<script>
+    /*
+     * 作者：sokie
+     *   qq：2048226123
+     * 描述：第一次上传资源，有点粗糙，以后有时间会优化的
+     *
+     */
+    // window.addEventListener('load',function(){
+    //  var initX;
+    //  var moveX;
+    //  var X = 0;
+    //  var objX = 0;
+    //  window.addEventListener('touchstart',function(event){
+    //      event.preventDefault();
+    //      var obj = event.target.parentNode;
+    //      if(obj.className == "list-li"){
+    //          initX = event.targetTouches[0].pageX;
+    //          objX =(obj.style.WebkitTransform.replace(/translateX\(/g,"").replace(/px\)/g,""))*1;
+    //      }
+    //      if( objX == 0){
+    //          window.addEventListener('touchmove',function(event) {
+    //              event.preventDefault();
+    //              var obj = event.target.parentNode;
+    //              if (obj.className == "list-li") {
+    //                  moveX = event.targetTouches[0].pageX;
+    //                  X = moveX - initX;
+    //                  if (X > 0) {
+    //                      obj.style.WebkitTransform = "translateX(" + 0 + "px)";
+    //                  }
+    //                  else if (X < 0) {
+    //                      var l = Math.abs(X);
+    //                      obj.style.WebkitTransform = "translateX(" + -l + "px)";
+    //                      if(l>80){
+    //                          l=80;
+    //                          obj.style.WebkitTransform = "translateX(" + -l + "px)";
+    //                      }
+    //                  }
+    //              }
+    //          });
+    //      }
+    //      else if(objX<0){
+    //          window.addEventListener('touchmove',function(event) {
+    //              event.preventDefault();
+    //              var obj = event.target.parentNode;
+    //              if (obj.className == "list-li") {
+    //                  moveX = event.targetTouches[0].pageX;
+    //                  X = moveX - initX;
+    //                  if (X > 0) {
+    //                      var r = -80 + Math.abs(X);
+    //                      obj.style.WebkitTransform = "translateX(" + r + "px)";
+    //                      if(r>0){
+    //                          r=0;
+    //                          obj.style.WebkitTransform = "translateX(" + r + "px)";
+    //                      }
+    //                  }
+    //                  else {     //向左滑动
+    //                      obj.style.WebkitTransform = "translateX(" + -80 + "px)";
+    //                  }
+    //              }
+    //          });
+    //      }
+
+    //  })
+    //  window.addEventListener('touchend',function(event){
+    //      event.preventDefault();
+    //      var obj = event.target.parentNode;
+    //      if(obj.className == "list-li"){
+    //          objX =(obj.style.WebkitTransform.replace(/translateX\(/g,"").replace(/px\)/g,""))*1;
+    //          if(objX>-40){
+    //              obj.style.WebkitTransform = "translateX(" + 0 + "px)";
+    //          }else{
+    //              obj.style.WebkitTransform = "translateX(" + -80 + "px)";
+    //          }
+    //      }
+    //   })
+
+    // })
+
+</script>
+
 </head>
-
 <body>
+<header>
+    <h2>消息列表</h2>
+</header>
+<section class="list">
+    <ul class="list-ul">
+        <li id="li" class="list-li">
+            <div class="con">
+                你的快递到了，请到楼下签收
+            </div>
+            <div class="btn">删除</div>
+        </li>
+        <li class="list-li">
+            <div class="con">
+                哇，你在干嘛，快点来啊就等你了
+            </div>
+            <div class="btn">删除</div>
+        </li>
+    </ul>
+</section>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        function prevent_default(e) {
+            e.preventDefault();
+        }
 
+        function disable_scroll() {
+            $(document).on('touchmove', prevent_default);
+        }
+
+        function enable_scroll() {
+            $(document).unbind('touchmove', prevent_default)
+        }
+
+        var x;
+        $('.list-li').on('touchstart',function(e){
+            $(this).css({left:'0'});
+            x = e.originalEvent.targetTouches[0].pageX
+        }).on('touchmove',function(e){
+             var change = e.originalEvent.targetTouches[0].pageX - x
+            change = Math.min(Math.max(-80, change), 0) // restrict to -100px left, 0px right
+            e.currentTarget.style.left = change + 'px'
+        }).on('touchend',function(e){
+            var left = parseInt(e.currentTarget.style.left)
+            var new_left;
+            if (left < -35) {
+                new_left = '-80px'
+            } else if (left > 35) {
+                new_left = '80px'
+            } else {
+                new_left = '0px'
+            }
+            $(e.currentTarget).animate({left: new_left}, 200)
+            e.preventDefault();
+            enable_scroll()
+        })
+        $('li .btn').on('touchend',function(e){
+            e.preventDefault();
+            $(this).parents('li').slideUp('fast',function(){
+                $(this).remove()
+            })
+        })
+    })
+</script>
 </body>
-
 </html>
