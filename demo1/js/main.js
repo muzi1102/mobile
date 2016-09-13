@@ -106,16 +106,18 @@ $(function() {
         }).on('touchmove',function(e){
              var change = e.originalEvent.targetTouches[0].pageX - x
             change = Math.min(Math.max(-54, change), 0) // restrict to -54 left, 0 right
-            e.currentTarget.style.left = change + 'px';
+            e.currentTarget.style.left = change/100 + 'rem';
         }).on('touchend',function(e){
-            var left = parseInt(e.currentTarget.style.left)
+            // var left = parseInt(e.currentTarget.style.left)
+            var left=$(e.currentTarget).position().left/100;
+            console.log(left);
             var new_left;
-            if (left < -35) {
+            if (left < -.35) {
                 new_left = '-.54rem'
-            } else if (left > 35) {
-                new_left = '.54rem'
+            } else if (left > .35) {
+                new_left = '.54rem';
             } else {
-                new_left = '0px'
+                new_left = '0'
             }
             $(e.currentTarget).animate({left: new_left}, 200)
             enable_scroll()
