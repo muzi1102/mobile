@@ -1211,17 +1211,6 @@ a.ui-qbtnsave {
     overflow: hidden;
 }
 
-.draf-item {
-    height: .44rem;
-    line-height: .44rem;
-    background-color: #fff;
-    margin-bottom: 0.08rem;
-    font-size: .16rem;
-    padding-left: .24rem;
-    position: relative;
-    padding-right: .36rem;
-    overflow: hidden;
-}
 
 .icon-editor {
     background-position: -1.55rem -2.16rem;
@@ -1237,26 +1226,7 @@ a.ui-qbtnsave {
     margin-top: 0.08rem;
 }
 
-.draf-item a {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
-    color: #4d4d4d;
-}
-.removebtn{
-    position: absolute;
-    top: 0;
-    right: -.54rem;
-    background-color: #ee780c;
-    color: #fff;
-    font-size: .14rem;
-    width: .54rem;
-    text-align: center;
-}
-
-
-.list-li{ 
+.draf-item{ 
     line-height: .44rem; 
     height: .44rem;
     position:relative;
@@ -1267,17 +1237,15 @@ a.ui-qbtnsave {
     font-size: .14rem;
     margin-bottom: 0.08rem;
 }
-.list-li:first-child {
-    margin-top: 0.08rem;
-}
-.list-li a{
+
+.draf-item a{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
     color: #4d4d4d;
 }
-.btn{ 
+.deletebtn{ 
     position: absolute;
     top: 0;
     right: -.54rem; 
