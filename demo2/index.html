@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -8,43 +9,45 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        em{
+            background: url('123.png') no-repeat 0 0;
+            float: left;
+            width: 24px;
+            height: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <div id="touch">touch</div>
+    <div id="starBox">
+        <em></em>
+        <em></em>
+        <em></em>
+        <em></em>
+        <em></em>
+    </div>
+    <p id="starNotice"></p>
 </body>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript">
-    var EventUtil = {
-    addHandler: function(element,type,handler) {
-        if(element.addEventListener) {
-            element.addEventListener(type,handler,false);
-        }else if(element.attachEvent) {
-            element.attachEvent("on"+type,handler);
-        }else {
-            element["on" +type] = handler;
+    $(function(){
+        var star=$('em'),
+            oDiv=$('#starBox');
+        for(var i=0, len=star.length;i<len;i++){
+            star.eq(i).on('touchend',function(){
+                for(var j=0;j<=$(this).index();j++){
+                    console.log(j)
+                    star.eq(j).css({
+                        backgroundPosition:'0 -25px'
+                    })
+                }
+            })
         }
-    },
-    removeHandler: function(element,type,handler){
-        if(element.removeEventListener) {
-            element.removeEventListener(type,handler,false);
-        }else if(element.detachEvent) {
-            element.detachEvent("on"+type,handler);
-        }else {
-            element["on" +type] = null;
-        }
-    }
-};
-    var touch = document.getElementById("touch");
-    EventUtil.addHandler(touch,"touchstart",function(event){
-        console.log(event);
-    });
-     
-    // 连续滑动触发
-    EventUtil.addHandler(window,"touchmove",function(event){
-        alert(1);
-    });
-    //当手指从屏幕上离开时触发;
-    EventUtil.addHandler(window,"touchend",function(event){
-        alert(2);
     })
 </script>
 </html>
