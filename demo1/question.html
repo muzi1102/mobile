@@ -11,6 +11,8 @@
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/demo.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/cropper.min.css">
 </head>
 
 <body>
@@ -28,7 +30,7 @@
     <!-- 中间内容开始  -->
     <div class="ui-content ui-question-bg ui-inner-content">
         <h2 class="ui-question-tag ui-panel">
-            <a href="questionselect.html">请选择问题类别<i class="iconfont icon-arrl"></i></a>
+            <a href="questionselect.html"><span class="ui-qfirst">请选择问题的类别</span><span class="ui-qsecond "></span><i class="iconfont icon-arrl"></i></a>
        </h2>
         <div class="ui-question-panel">
             <form action="">
@@ -43,9 +45,36 @@
                     <div class="ui-qword clearfix">
                         <p class="fr ui-qwordblock"><span id="J-counter">0</span>/400</p>
                     </div>
+                    <!-- 文件上传开始 -->
                     <div class="ui-qplugin">
-                        <i class="iconfont icon-add"></i>
+                        <!-- <i class="iconfont icon-add"></i> -->
+                        <section class="upload-box" id="J_upload_box">
+                            <div class="upload" id="J_file_wrap">
+                                <input type="file" accept="image/*" name="pic" id="J_file">
+                            </div>
+                        </section>
                     </div>
+                    <!-- 图片裁剪工作区域 -->
+                    <section id="J_file_box">
+                        <img src="" id="J_file_box_img" alt="" />
+                    </section>
+                    <!-- 选择裁剪比例 -->
+                    <section class="crop-group" id="J_crop_group">
+                        <label>
+                            <input type="radio" name="scale" value="1/1">
+                            <span>1 : 1</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="scale" value="4/3" checked="checked">
+                            <span>4 : 3</span>
+                        </label>
+                    </section>
+                    <!-- 裁剪或取消 -->
+                    <section class="btn-group" id="J_btn_group">
+                        <span id="J_cancel">取消</span>
+                        <span id="J_crop">裁剪</span>
+                    </section>
+                    <!-- 文件上传结束 -->
                 </div>
                 <div class="ui-qcontact ui-panel">
                     <h3 class="ui-qcontact-title">联系方式</h3>
@@ -97,7 +126,8 @@
     </div> -->
 </body>
 <script type="text/javascript" src="js/adapter.js"></script>
-<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/upload.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
 </html>

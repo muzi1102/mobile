@@ -277,9 +277,11 @@ only screen and (min-device-pixel-ratio: 3) {
     top: 50%;
     margin: -.15rem .18rem 0;
 }
-.ui-proname-inner.ui-proname-difinner{
-     margin: -.225rem .18rem 0;
+
+.ui-proname-inner.ui-proname-difinner {
+    margin: -.225rem .18rem 0;
 }
+
 .ui-proitem {
     font-size: .15rem;
     background-color: #fff;
@@ -386,15 +388,19 @@ h2.ui-space {
     margin: .2rem auto;
 }
 
-.ui-push-more{
+.ui-push-more {
     display: none;
 }
-.ui-proname-inner.ui-push-proinner{
+
+.ui-proname-inner.ui-push-proinner {
     margin: -0.075rem .18rem 0;
 }
-.morepro .icon-aset{
+
+.morepro .icon-aset {
     background-position: -1.55rem -1.85rem;
 }
+
+
 /* 搜索结束 */
 
 
@@ -522,8 +528,19 @@ h2.ui-space {
     overflow: hidden;
 }
 
+.ui-related-col.ui-search-first {
+    font-size: .15rem;
+    color: #989898;
+    height: .6rem;
+    line-height: .6rem;
+}
+
 .ui-second-col {
     padding-right: .18rem;
+}
+
+.ui-search-count {
+    margin-left: .1rem;
 }
 
 .icon-arrl {
@@ -762,6 +779,7 @@ a.active {
     width: .84rem;
     text-align: center;
     float: left;
+    margin-top: .1rem;
 }
 
 .ui-re-status {
@@ -821,6 +839,7 @@ a.active {
 
 .ui-day {
     color: #010101;
+    margin-bottom: 0.08rem;
 }
 
 .ui-requested-title {
@@ -967,10 +986,13 @@ i.icon-liked {
     color: #4d4d4d;
     display: block;
     position: relative;
+    height: 100%;
 }
-.ui-qfirst{
+
+.ui-qfirst {
     position: absolute;
 }
+
 .ui-qsecond {
     font-size: .14rem;
     overflow: hidden;
@@ -989,6 +1011,8 @@ i.icon-liked {
     width: .6rem;
     line-height: .44rem;
     position: absolute;
+    display: inline-block;
+    text-align: left;
 }
 
 a.ui-qbtnsave {
@@ -1067,6 +1091,7 @@ a.ui-qbtnsave {
     color: #989898;
     margin-left: .24rem;
     padding-top: .18rem;
+    text-align: left;
 }
 
 .ui-qbtninner {
@@ -1119,6 +1144,10 @@ a.ui-qbtnsave {
     font-size: .12rem;
     color: #6b6b6b;
     border-right: 1px solid #ededed;
+}
+
+.ui-qscontent li.active {
+    color: #399026
 }
 
 .ui-qstab-item.active {
@@ -1211,7 +1240,6 @@ a.ui-qbtnsave {
     overflow: hidden;
 }
 
-
 .icon-editor {
     background-position: -1.55rem -2.16rem;
     width: .16rem;
@@ -1226,10 +1254,10 @@ a.ui-qbtnsave {
     margin-top: 0.08rem;
 }
 
-.draf-item{ 
-    line-height: .44rem; 
+.draf-item {
+    line-height: .44rem;
     height: .44rem;
-    position:relative;
+    position: relative;
     padding-left: .24rem;
     padding-right: .54rem;
     color: #4d4d4d;
@@ -1238,22 +1266,146 @@ a.ui-qbtnsave {
     margin-bottom: 0.08rem;
 }
 
-.draf-item a{
+.ui-draf-des {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
     color: #4d4d4d;
 }
-.deletebtn{ 
+
+.deletebtn {
     position: absolute;
     top: 0;
-    right: -.54rem; 
-    text-align: center; 
-    background-color: #ee780c; 
-    color: #fff; width: .54rem
+    right: -.54rem;
+    text-align: center;
+    background-color: #ee780c;
+    color: #fff;
+    width: .54rem
 }
+
+
 /* 我的草稿结束 */
+
+
+/* 移动图片上传插件的样式 开始*/
+
+.upload-box {
+    text-align: left;
+}
+
+.upload-box .item,
+.upload-box .upload {
+    position: relative;
+    display: inline-block;
+    width: .57rem;
+    height: .57rem;
+    margin: 0 0.08rem 0.08rem 0;
+    background: url('../img/UI01.png') no-repeat;
+    background-size: 2.03rem 4.23rem;
+    background-position: -.21rem -1.2rem;
+}
+
+.upload-box .item:ntn-child(5n),
+.upload-box .upload:ntn-child(5n) {
+    margin-right: 0;
+}
+
+.upload-box .item i,
+.upload-box .upload i {
+    z-index: 2;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 19px;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: -6px;
+    color: #fff;
+    right: -6px;
+    font-style: normal;
+    border-radius: 30px;
+}
+
+.upload-box input[type="file"] {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#J_file_box {
+    display: none;
+    z-index: 5009;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.crop-group {
+    display: none;
+    z-index: 15010;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 15px;
+    color: #666;
+    text-align: center;
+}
+
+.crop-group input {
+    display: none;
+}
+
+.crop-group span {
+    display: inline-block;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border: 2px solid #fff;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.84);
+}
+
+.crop-group input:checked + span {
+    color: #fff;
+    background-color: rgba(43, 137, 232, 0.84);
+}
+
+.btn-group {
+    display: none;
+    z-index: 5010;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.btn-group span {
+    display: inline-block;
+    padding: 4px 20px;
+    background: #2b89e8;
+    border-radius: 5px;
+}
+
+#J_cancel {
+    margin-right: 30px;
+    background: #ccc;
+}
+
+
+/*移动图片上传插件的样式  结束 */
 
 .fl {
     float: left!important;
