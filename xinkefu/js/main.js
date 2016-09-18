@@ -1,12 +1,12 @@
 $(function() {
     // 我的请求导航条切换
-    $('.req-item a').on('click', function() {
+    $('.req-item a').on('touchend', function() {
             var $index = $(this).parent().index();
             $(this).addClass('active').parent().siblings().find('a').removeClass('active');
             $('.timeline').eq($index).addClass('active').siblings().removeClass('active');
         })
         // 选择问题的切换
-    $('.ui-qstab-item').on('click', function() {
+    $('.ui-qstab-item').on('touchend', function() {
             var $index = $(this).index(),
                 val;
             $(this).addClass('active').siblings().removeClass('active');
@@ -14,20 +14,22 @@ $(function() {
             $('.ui-qscontent').eq($index).addClass('active').siblings().removeClass('active');
             $('.ui-qfirst').text(val);
     })
-    // 问题的选择item
-    $('.ui-qscontent li').not('.ui-qscategory').on('click',function(){
-        var val=$(this).text();
-        $(this).addClass('active').siblings().removeClass('active');
-        $('.ui-qsecond').text(val);
+    // 问题选择的展开
+    $('.ui-qscategory').on('touchend',function(){
+        $(this).parents('.second-qscontent').toggleClass('open');
     })
-
+    // 有二级问题的选择
+    $('.ui-qscontent li').not('.ui-qscategory').on('touchend',function(){
+        $(this).addClass('active').siblings().removeClass('active')
+               .parents('.second-qscontent').siblings().find('li').removeClass('active')
+    })
     // 点赞后的状态
-    $('#j-zan').on('click', function() {
+    $('#j-zan').on('touchend', function() {
             $(this).html('谢谢你的赞').addClass('ui-zaned').children().remove();
     });
     // 满意度评分
     (function(){
-        var $star=$('.icon-like');
+        var $star=$('.J-rate .icon-like')
         for(var i=0, len=$star.length;i<len;i++){
             $star.eq(i).on('touchend',function(){
                 clearStar($star);
@@ -303,7 +305,7 @@ $(function() {
     $('.ui-empty').on('click', function() {
             $(this).parents('.ui-related-list').remove();
         })
-        // 我的草稿滑动删除的效果
+    // 我的草稿滑动删除的效果
     function prevent_default(e) {
         e.preventDefault();
     }

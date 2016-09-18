@@ -176,6 +176,9 @@ only screen and (min-device-pixel-ratio: 3) {
     border-radius: 50%;
     width: .32rem;
     height: .32rem;
+    /* animation: spin 1s linear infinite; */ 
+    -webkit-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
 }
 .loader.loader2{
@@ -461,13 +464,14 @@ h2.ui-space {
 }
 
 .m-answer {
-    padding: .12rem .22rem 0 0;
+    padding-top:.12rem;
 }
 
 .m-ansewerinner {
     margin-left: .22rem;
     padding-top: .1rem;
     padding-bottom: .24rem;
+    padding-right: .22rem;
     border-bottom: 1px solid #ededed;
 }
 
@@ -918,7 +922,9 @@ a.active {
     margin-top: 0.1rem;
     margin-left: .1rem;
 }
-
+.icon-like.icon-liked{
+    background-position: -0.18rem -2.18rem;
+}
 .icon-master {
     background-position: -1.43rem -2.7rem;
     width: .32rem;
@@ -1042,7 +1048,7 @@ a.active {
 }
 
 .ui-label {
-    width: .6rem;
+    width: .45rem;
     line-height: .44rem;
     position: absolute;
     display: inline-block;
@@ -1189,8 +1195,10 @@ a.ui-qbtnsave {
 }
 
 .ui-qscontent li.ui-qscategory {
-    font-size: .14rem;
-    color: #989898;
+    font-size: .15rem;
+    color: #404040;
+    position: relative;
+    display: block;
 }
 
 .ui-qscontent-list {
@@ -1202,9 +1210,29 @@ a.ui-qbtnsave {
     line-height: .44rem;
     padding-left: .16rem;
     border-bottom: 1px solid #ededed;
-    color: #4d4d4d;
+    color: #686868;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: .15rem;
 }
-
+.icon-downward{
+    background-position: -1.35rem -1.55rem;
+    width: .11rem;
+    height: .1rem;
+    position: absolute;
+    right: .18rem;
+    top: .17rem;
+    -webkit-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+.second-qscontent.open .icon-downward{
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
 .ui-qstab-item {
     height: .75rem;
     border-bottom: 1px solid #ededed;
@@ -1212,10 +1240,20 @@ a.ui-qbtnsave {
     line-height: .75rem;
     text-align: center;
 }
+/* .J-down{
+    line-height: .44rem;
+    display: inline-block;
+} */
 
 .ui-qscontent {
     display: none;
     font-size: .16rem;
+}
+.second-qscontent li{
+    display: none;
+}
+.second-qscontent.open li{
+    display: block;
 }
 
 .ui-qscontent.active {
@@ -1296,7 +1334,7 @@ a.ui-qbtnsave {
     padding-right: .54rem;
     color: #4d4d4d;
     background: #fff;
-    font-size: .14rem;
+    font-size: .16rem;
     margin-bottom: 0.08rem;
 }
 
