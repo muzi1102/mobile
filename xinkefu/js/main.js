@@ -10,41 +10,42 @@ $(function() {
             var $index = $(this).index(),
                 val;
             $(this).addClass('active').siblings().removeClass('active');
-            val=$(this).text()
+            val = $(this).text()
             $('.ui-qscontent').eq($index).addClass('active').siblings().removeClass('active');
             $('.ui-qfirst').text(val);
-    })
-    // 问题选择的展开
-    $('.ui-qscategory').on('touchend',function(){
-        $(this).parents('.second-qscontent').toggleClass('open');
-    })
-    // 有二级问题的选择
-    $('.ui-qscontent li').not('.ui-qscategory').on('touchend',function(){
-        $(this).addClass('active').siblings().removeClass('active')
-               .parents('.second-qscontent').siblings().find('li').removeClass('active')
-    })
-    // 点赞后的状态
+        })
+        // 问题选择的展开
+    $('.ui-qscategory').on('touchend', function() {
+            $(this).parents('.second-qscontent').toggleClass('open');
+        })
+        // 有二级问题的选择
+    $('.ui-qscontent li').not('.ui-qscategory').on('touchend', function() {
+            $(this).addClass('active').siblings().removeClass('active')
+                .parents('.second-qscontent').siblings().find('li').removeClass('active')
+        })
+        // 点赞后的状态
     $('#j-zan').on('touchend', function() {
-            $(this).html('谢谢你的赞').addClass('ui-zaned').children().remove();
+        $(this).html('谢谢你的赞').addClass('ui-zaned').children().remove();
     });
     // 满意度评分
-    (function(){
-        var $star=$('.J-rate .icon-like')
-        for(var i=0, len=$star.length;i<len;i++){
-            $star.eq(i).on('touchend',function(){
+    (function() {
+        var $star = $('.J-rate .icon-like')
+        for (var i = 0, len = $star.length; i < len; i++) {
+            $star.eq(i).on('touchend', function() {
                 clearStar($star);
-                for(var j=0;j<=$(this).index();j++){
+                for (var j = 0; j <= $(this).index(); j++) {
                     $star.eq(j).css({
-                        backgroundPosition:'-.18rem -2.18rem'
-                    }) 
+                        backgroundPosition: '-.18rem -2.18rem'
+                    })
                 }
             })
         }
     })()
-    function clearStar(iNode){
-        for(var i=0 ;i<iNode.length;i++){
+
+    function clearStar(iNode) {
+        for (var i = 0; i < iNode.length; i++) {
             iNode.eq(i).css({
-                backgroundPosition:'-.55rem -2.18rem'
+                backgroundPosition: '-.55rem -2.18rem'
             })
         }
     }
@@ -86,6 +87,15 @@ $(function() {
             $('.ui-searchbar-input input').val('')
         })
     });
+    // 搜索问题结果的个数
+    (function(){
+        $('.ui-search-summary').each(function(){
+            var num=$(this).find('li').not('.ui-search-first').length;
+            $(this).find('.ui-search-count').text('('+num+')');
+        })
+        
+        // $('.ui-search-count').text()
+    })();
     // 搜索猜你喜欢问题展开；
     (function() {
         $('.ui-proitem').each(function() {
@@ -305,7 +315,7 @@ $(function() {
     $('.ui-empty').on('click', function() {
             $(this).parents('.ui-related-list').remove();
         })
-    // 我的草稿滑动删除的效果
+        // 我的草稿滑动删除的效果
     function prevent_default(e) {
         e.preventDefault();
     }
@@ -316,31 +326,32 @@ $(function() {
 
     function enable_scroll() {
         $(document).unbind('touchmove', prevent_default)
-    }
+    };
 
-    var x;
-    $('.draf-item').on('touchstart', function(e) {
-        $(this).css({ left: '0' });
-        x = e.originalEvent.targetTouches[0].pageX
-    }).on('touchmove', function(e) {
-        e.preventDefault();
-        var change = e.originalEvent.targetTouches[0].pageX - x
-        change = Math.min(Math.max(-54, change), 0) // restrict to -54 left, 0 right
-        e.currentTarget.style.left = change / 100 + 'rem';
-        console.log('a');
-    }).on('touchend', function(e) {
-        var left = $(e.currentTarget).position().left / 100;
-        var new_left;
-        if (left < -.45) {
-            new_left = '-.54rem'
-        } else if (left > .45) {
-            new_left = '.54rem';
-        } else {
-            new_left = '0'
-        }
-        $(e.currentTarget).animate({ left: new_left }, 100)
-        enable_scroll()
-    })
+    (function() {
+        var x;
+        $('.draf-item').on('touchstart', function(e) {
+            $(this).css({ left: '0' });
+            x = e.originalEvent.targetTouches[0].pageX
+        }).on('touchmove', function(e) {
+            e.preventDefault();
+            var change = e.originalEvent.targetTouches[0].pageX - x
+            change = Math.min(Math.max(-54, change), 0) // restrict to -54 left, 0 right
+            e.currentTarget.style.left = change / 100 + 'rem';
+        }).on('touchend', function(e) {
+            var left = $(e.currentTarget).position().left / 100;
+            var new_left;
+            if (left < -.45) {
+                new_left = '-.54rem'
+            } else if (left > .45) {
+                new_left = '.54rem';
+            } else {
+                new_left = '0'
+            }
+            $(e.currentTarget).animate({ left: new_left }, 100)
+            enable_scroll()
+        })
+    })()
     $('.draf-item .deletebtn').on('touchend', function(e) {
         e.preventDefault();
         $(this).parents('li').slideUp('normal', function() {
