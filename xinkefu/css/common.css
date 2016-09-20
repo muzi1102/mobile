@@ -79,7 +79,8 @@ only screen and (min-device-pixel-ratio: 3) {
     text-align: center;
     display: block;
     color: #989898;
-    padding-bottom: 0.08rem;
+    /* padding-bottom: 0.08rem; */
+    width: 100%;
     padding-top: 0.06rem;
     position: relative;
 }
