@@ -100,7 +100,7 @@ only screen and (min-device-pixel-ratio: 3) {
     width: 0.08rem;
     height: 0.08rem;
     background-color: #f74c31;
-    border-radius: 0.05rem;
+    border-radius: 0.04rem;
     right: .48rem;
     top: -.02rem;
 }
@@ -826,7 +826,7 @@ a.active {
     width: 0.08rem;
     height: 0.08rem;
     background-color: #f74c31;
-    border-radius: 0.05rem;
+    border-radius: 0.04rem;
     right: .2rem;
     top: .14rem;
 }
