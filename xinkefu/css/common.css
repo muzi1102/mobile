@@ -37,8 +37,8 @@ only screen and (min-device-pixel-ratio: 3) {
 .header {
     width: 100%;
     height: .44rem;
-    background-color: #fff;
-    border-bottom: 1px solid #c4c4c4;
+    background-color: #f4a034;
+    border-bottom: 1px solid #e0e0e0;
     padding-left: .13rem;
     line-height: .44rem;
     position: relative;
@@ -224,7 +224,8 @@ only screen and (min-device-pixel-ratio: 3) {
 .connnet,
 .ui-content {
     width: 100%;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #f0f0f0;
     position: absolute;
     left: 0;
     right: 0;
@@ -232,7 +233,9 @@ only screen and (min-device-pixel-ratio: 3) {
     bottom: .48rem;
     overflow-y: auto;
 }
-
+.ui-content.ui-content-nbottom{
+bottom: 0;
+}
 .ui-inner-content {
     bottom: 0;
 }
@@ -319,8 +322,9 @@ only screen and (min-device-pixel-ratio: 3) {
     font-size: .13rem;
     width: .9rem;
     text-align: center;
-    border-right: 1px solid #ededed;
-    background-color: #f9fcf8;
+    /* border-right: 1px solid #ededed; */
+    border-right: 1px solid #e0e0e0;
+    background-color: #fff;
     top: 0;
     bottom: 0;
     position: absolute;
@@ -354,7 +358,8 @@ only screen and (min-device-pixel-ratio: 3) {
 .ui-proitem li {
     height: .4rem;
     line-height: .4rem;
-    border-bottom: 1px solid #ededed;
+    /* border-bottom: 1px solid #ededed; */
+    border-bottom: 1px solid #e0e0e0;
     overflow: hidden;
 }
 
@@ -469,7 +474,7 @@ h2.ui-space {
     padding-bottom: .14rem;
     margin-left: .22rem;
     padding-right: .16rem;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid #e0e0e0;
     color: rgb(77, 77, 77)
 }
 
@@ -491,14 +496,14 @@ h2.ui-space {
     padding-top: .1rem;
     padding-bottom: .24rem;
     padding-right: .22rem;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .m-question {
     margin-left: .21rem;
     color: #989898;
     padding: .15rem 0;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid #e0e0e0;
     font-size: .15rem;
     margin-right: .22rem;
 }
@@ -530,11 +535,14 @@ h2.ui-space {
     line-height: .42rem;
     float: left;
     text-align: center;
+    color: #f4a034;
+    border: 1px solid #f4a034;
+    background-color: #fff;
 }
 
 .ui-btn-lightblue {
-    border: 2px solid #5bb647;
-    color: #5bb647;
+    border: 2px solid #f4a034;
+    color: #f4a034;
     font-weight: bold;
 }
 
@@ -543,14 +551,12 @@ h2.ui-space {
     color: #bababa;
 }
 
-.ui-btn-blue {
+/* .ui-btn-blue {
     background-color: #5bb647;
     color: #fff;
-}
+} */
 
 .ui-btn-gray {
-    background-color: #ededed;
-    color: #4d4d4d;
     margin-right: .3rem;
 }
 
@@ -563,8 +569,8 @@ h2.ui-space {
 }
 
 .icon-zan {
-    background-position: -1.52rem -3.48rem;
-    width: .26rem;
+    background-position: -1.52rem -3.8rem;
+    width: .28rem;
     height: .26rem;
     margin-right: .13rem;
     vertical-align: middle;
@@ -579,7 +585,7 @@ h2.ui-space {
     height: .44rem;
     line-height: .44rem;
     margin-left: .24rem;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid #e0e0e0;
     font-size: .16rem;
     position: relative;
     overflow: hidden;
@@ -657,9 +663,9 @@ h2.ui-space {
 
 .ui-submitbtn {
     display: block;
-    color: #4d4d4d;
+    color: #f4a034;
     padding: .14rem 0;
-    border: 1px solid rgb(221, 221, 221);
+    border: 1px solid #f4a034;
     background-color: #fff;
 }
 
@@ -797,7 +803,7 @@ a.active {
     position: relative;
     font-size: .12rem;
     display: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .timeline.active {
@@ -926,7 +932,7 @@ a.active {
     margin-left: .21rem;
     height: .44rem;
     line-height: .44rem;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid #e0e0e0;
     color: #989898;
     font-size: .14rem;
     padding-right: .3rem;
@@ -983,7 +989,7 @@ a.active {
     padding-top: .2rem;
     margin-left: .21rem;
     padding-bottom: .28rem;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid #e0e0e0;
     margin-right: .22rem;
 }
 
@@ -1004,8 +1010,9 @@ a.active {
 }
 
 .ui-editorbtn-block {
-    background-color: rgb(91, 182, 71);
-    color: #fff;
+    background-color: #fff;
+    color: #f4a034;
+    border: 1px solid #f4a034;
     display: block;
     font-size: .16rem;
     height: .42rem;
@@ -1073,13 +1080,9 @@ a.active {
     position: absolute;
     display: inline-block;
     text-align: left;
+    color: #f4a034
 }
 
-a.ui-qbtnsave {
-    background-color: #5bb647;
-    color: #fff;
-    border: none;
-}
 
 .ui-panel {
     background-color: #fff;
@@ -1112,7 +1115,7 @@ a.ui-qbtnsave {
 .ui-qinput {
     padding-left: .24rem;
     line-height: .46rem;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .ui-qinput input {
@@ -1123,7 +1126,7 @@ a.ui-qbtnsave {
 
 .ui-qword {
     margin-left: .24rem;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid #e0e0e0;
     padding: .1rem 0;
     /* margin-right: .18rem; */
     font-size: .14rem;
@@ -1170,19 +1173,19 @@ a.ui-qbtnsave {
     line-height: .42rem;
     float: left;
     text-align: center;
-    border: 1px solid #ddd;
-    background-color: #ddd;
-    color: #4d4d4d;
+    border: 1px solid #f4a034;
+    background-color: #fff;
+    color: #f4a034;
 }
 
 .ui-qbtn a:first-child {
     margin-right: .3rem;
 }
 
-.ui-qbtndisable {
+/* .ui-qbtndisable {
     background-color: #fff;
     color: #bababa;
-}
+} */
 
 .icon-require {
     color: red;
@@ -1203,7 +1206,8 @@ a.ui-qbtnsave {
     top: 0;
     font-size: .12rem;
     color: #6b6b6b;
-    border-right: 1px solid #ededed;
+    border-right: 1px solid #e0e0e0;
+    background-color: #fff;
 }
 
 .ui-qscontent li.active {
@@ -1223,13 +1227,14 @@ a.ui-qbtnsave {
 
 .ui-qscontent-list {
     margin-left: .9rem;
+    background-color: #fff;
 }
 
 .ui-qscontent li {
     height: .44rem;
     line-height: .44rem;
     padding-left: .16rem;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid #e0e0e0;
     color: #686868;
     overflow: hidden;
     white-space: nowrap;
@@ -1255,10 +1260,10 @@ a.ui-qbtnsave {
 }
 .ui-qstab-item {
     height: .75rem;
-    border-bottom: 1px solid #ededed;
-    background-color: #f9fcf8;
+    border-bottom: 1px solid #e0e0e0;
     line-height: .75rem;
     text-align: center;
+    background-color: #fff;
 }
 /* .J-down{
     line-height: .44rem;
@@ -1306,8 +1311,9 @@ a.ui-qbtnsave {
 .ui-dialog-btn {
     width: .9rem;
     height: .38rem;
-    background-color: #ededed;
-    color: #4d4d4d;
+    background-color: #FFF;
+    color: #f4a034;
+    border: 1px solid #f4a034;
     text-align: center;
     line-height: .38rem;
     display: inline-block;
@@ -1496,7 +1502,9 @@ a.ui-qbtnsave {
     background: #ccc;
 }
 
-
+.ui-proitem li a:focus{
+    background-color:#f4a034
+}
 /*移动图片上传插件的样式  结束 */
 
 .fl {
