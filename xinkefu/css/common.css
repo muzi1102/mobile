@@ -670,7 +670,7 @@ h2.ui-space {
 }
 
 a.ui-submitbtn-success {
-    background-color: rgb(91, 182, 71);
+    background-color: #f4a034;
     color: #fff;
     border: none;
 }
@@ -1507,6 +1507,11 @@ a.active {
 }
 /*移动图片上传插件的样式  结束 */
 
+/* 按钮点击改变颜色 */
+.ui-qbtnitem:focus,.ui-dialog-btn:focus,.ui-submitbtn:focus,.ui-editorbtn-block:focus,.ui-btn:focus{
+    background-color: #f4a034;
+    color: #fff;,
+}
 .fl {
     float: left!important;
 }
