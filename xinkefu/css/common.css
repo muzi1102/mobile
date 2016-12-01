@@ -1502,13 +1502,13 @@ a.active {
     background: #ccc;
 }
 
-.ui-proitem li a:focus{
+.ui-proitem li a:active{
     background-color:#f4a034
 }
 /*移动图片上传插件的样式  结束 */
 
 /* 按钮点击改变颜色 */
-.ui-qbtnitem:focus,.ui-dialog-btn:focus,.ui-submitbtn:focus,.ui-editorbtn-block:focus,.ui-btn:focus{
+.ui-qbtnitem:active,.ui-dialog-btn:active,.ui-submitbtn:active,.ui-editorbtn-block:active,.ui-btn:active{
     background-color: #f4a034;
     color: #fff;,
 }
